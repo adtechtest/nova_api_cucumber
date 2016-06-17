@@ -1,0 +1,28 @@
+{
+   "Eveninga" : [
+      {
+         "signature" : "MODZT_20_035",
+         "duration" : 35,
+         "cities" : [
+         ] 
+      },
+      {
+         "signature" : "MODZT_20_035",
+         "duration" : 35,
+         "cities" : [
+            {
+               "captions" : [
+                  {
+                     "ad_name" : "FML320",
+                     "name" : "Family Edit 1",
+                     "duration" : 20,
+                     "city" : "BA",
+                     "id" : "7Q430S3841J3"
+                  }
+               ],
+               "code" : "BA"
+            }
+         ]
+      }
+   ]
+}

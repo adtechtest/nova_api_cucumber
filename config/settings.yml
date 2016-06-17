@@ -1,0 +1,35 @@
+development:
+  scheduling:
+    username: amagi
+    password: amagi123
+  api:
+    username: amagi
+    password: amagi123
+  billing_system:
+    username: amagi
+    password: amagi123
+  publish_command: curl --insecure -d 'Data=channelLog&Channel={channel_code}&Date={date}'  'https://pluto.amagi.com:8443/webpublisher/Base'
+  authenticity_token:
+
+test:
+  scheduling:
+    username: amagi
+    password: amagi123
+  api:
+    username: amagi
+    password: amagi123
+  billing_system:
+    username: amagi
+    password: amagi123
+  publish_command: curl --insecure -d 'Data=channelLog&Channel={channel_code}&Date={date}'  'https://pluto.amagi.com:8443/webpublisher/Base'
+
+production:
+  scheduling:
+    username: amagi
+    password: amagi123
+  api:
+    username: amagi
+    password: amagi123
+  billing_system:
+    username: amagi
+    password: amagi123

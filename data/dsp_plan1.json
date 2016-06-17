@@ -1,0 +1,146 @@
+{
+  "id": "19",
+  "start_date": "2016-01-01",
+  "end_date": "2016-01-01",
+  "name": "campaign name1",
+  "client": {
+    "id": "11",
+    "name": "NRI Hospital 2"
+  },
+  "agency": {
+    "id": "7012",
+    "name": "agency name1"
+  },
+  "geocampaigns": [
+    {
+      "id": "1121",
+      "name": "NRI Hospital Delhi",
+      "geography_code": "DL",
+      "product_category": "product1",
+      "brand_name": "brand1",
+      "captions": [
+        {
+          "id": "11232",
+          "name": "NRI Hospital Delhi 10 sec",
+          "duration": 12,
+          "creative_name": "ABCD_111",
+          "rotate_plan": [
+            {
+              "channel_code": "ZT",
+              "daypart": "Morning",
+              "date": "2016-05-01",
+              "spot_count": 3,
+              "rate": 110.0
+            },
+            {
+              "channel_code": "ZT",
+              "daypart": "Evening",
+              "date": "2016-05-02",
+              "spot_count": 2,
+              "rate": 140.0
+            }
+          ]
+        },
+        {
+          "id": "11242",
+          "name": "caption1",
+          "creative_name": "ABCD110",
+          "duration": 10,
+          "rotate_plan": [
+            {
+              "channel_code": "ZT",
+              "daypart": "Morning",
+              "date": "2016-05-01",
+              "spot_count": 2,
+              "rate": 110.0
+            },
+            {
+              "channel_code": "ZT",
+              "daypart": "Afternoon",
+              "date": "2016-05-01",
+              "spot_count": 2,
+              "rate": 150.0
+            },
+            {
+              "channel_code": "ZT",
+              "daypart": "Evening",
+              "date": "2016-05-01",
+              "spot_count": 3,
+              "rate": 200.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1131",
+      "name": "NRI Hospital Delhi",
+      "geography_code": "DL",
+      "product_category": "product1",
+      "brand_name": "brand1",
+      "product_sub_category": "product_sb1",
+      "telecast_cities": "telecast_cities1",
+      "captions": [
+        {
+          "id": "1128",
+          "name": "NRI Hospital Delhi 10 sec",
+          "duration": 10,
+          "creative_name": "ABCD110",
+          "rotate_plan": [
+            {
+              "channel_code": "ZT",
+              "daypart": "Morning",
+              "date": "2016-05-01",
+              "spot_count": 2,
+              "rate": 110.0
+            },
+            {
+              "channel_code": "ZT",
+              "daypart": "Afternoon",
+              "date": "2016-05-01",
+              "spot_count": 2,
+              "rate": 120.0
+            },
+            {
+              "channel_code": "ZT",
+              "daypart": "Evening",
+              "date": "2016-05-01",
+              "spot_count": 3,
+              "rate": 140.0
+            }
+          ]
+        },
+        {
+          "id": "1129",
+          "name": "caption1",
+          "creative_name": "ABCD110",
+          "duration": 10,
+          "rotate_plan": [
+            {
+              "channel_code": "ZT",
+              "daypart": "Morning",
+              "date": "2016-05-01",
+              "spot_count": 2,
+              "rate": 110.0
+            },
+            {
+              "channel_code": "ZT",
+              "daypart": "Afternoon",
+              "date": "2016-05-01",
+              "spot_count": 2,
+              "rate": 150.0
+            },
+            {
+              "channel_code": "ZT",
+              "daypart": "Evening",
+              "date": "2016-05-01",
+              "spot_count": 3,
+              "rate": 200.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

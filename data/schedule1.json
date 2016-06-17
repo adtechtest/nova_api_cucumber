@@ -1,0 +1,104 @@
+{
+   "Evening" : [
+      {
+         "signature" : "KOTIB_04_015",
+         "duration" : 35,
+         "cities" : []
+      },
+      {
+         "signature" : "KOTIB_04_015",
+         "duration" : 35,
+         "cities" : [
+            {
+               "captions" : [
+                  {
+                     "ad_name" : "FML320",
+                     "name" : "Family Edit 1",
+                     "duration" : 20,
+                     "city" : "BA",
+                     "id" : "7Q430S3841J3"
+                  },
+                  {
+                     "ad_name" : "FML310",
+                     "name" : "Family Edit 2",
+                     "duration" : 20,
+                     "city" : "BA",
+                     "id" : "7Q430S3841J3"
+                  }
+               ],
+               "code" : "BA"
+            }
+         ]
+      },
+      {
+         "signature" : "KOTIB_05_015",
+         "duration" : 35,
+         "cities" : [
+            {
+               "captions" : [
+                  {
+                     "ad_name" : "FML320",
+                     "name" : "Family Edit 1",
+                     "duration" : 20,
+                     "city" : "BA",
+                     "id" : "7Q430S3841J3"
+                  },
+                  {
+                     "ad_name" : "FML310",
+                     "name" : "Family Edit 2",
+                     "duration" : 20,
+                     "city" : "BA",
+                     "id" : "7Q430S3841J3"
+                  }
+               ],
+               "code" : "BA"
+            }
+         ]
+      },
+      {
+         "signature" : "MODZT_10_035",
+         "duration" : 35,
+         "cities" : [
+            {
+               "captions" : [
+                  {
+                     "ad_name" : "FML320",
+                     "name" : "Family Edit 1",
+                     "duration" : 20,
+                     "city" : "BA",
+                     "id" : "7Q430S3841J5"
+                  },
+                  {
+                     "ad_name" : "FML310",
+                     "name" : "Family Edit 2",
+                     "duration" : 20,
+                     "city" : "BA",
+                     "id" : "7Q430S3841J5"
+                  }
+               ],
+               "code" : "BA"
+            }
+         ]
+      }
+   ],
+   "Morning" : [
+      {
+         "signature" : "MODZT_10_035",
+         "duration" : 35,
+         "cities" : [
+            {
+               "captions" : [
+                  {
+                     "ad_name" : "FML320",
+                     "name" : "Family Edit 1",
+                     "duration" : 20,
+                     "city" : "BA",
+                     "id" : "7Q430S3841J4"
+                  }
+               ],
+               "code" : "BA"
+            }
+         ]
+      }
+   ]
+}

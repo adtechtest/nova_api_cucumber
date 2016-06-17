@@ -1,0 +1,17 @@
+<h1>Invoice details</h1>
+<table border="1">
+  <% first_invoice = @invoices.first %>
+  <% header = first_invoice.to_map.keys %>
+    <tr>
+      <% header.each do |column| %>
+        <td><b><%= column.capitalize %></b></td>
+      <% end %> 
+    </tr>
+  <% @invoices.each do |invoice| %>
+    <tr>
+    <% header.each do |column|  %>
+      <td nowrap><%= invoice.to_map[column] %></td>
+    <% end %>
+    </tr>
+  <% end %>
+</table>

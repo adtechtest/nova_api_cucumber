@@ -1,0 +1,206 @@
+{
+  "Morning": {
+    "channel_code": "ZC",
+    "masters": {
+      "ABHZC_09_030": {
+        "blockedCities": {
+          "MA": "MA"
+        },
+        "captions": {
+          "43NQ661IZSE5": {
+            "cities": [
+              "MA"
+            ],
+            "schedule_type": "OPEN_RO_ANY_DAY_PART",
+            "duration": 30,
+            "name": "New Amagi Filler 30s_Hindi",
+            "ad_name": "NAF130",
+            "city": "MA",
+            "id": "43NQ661IZSE5",
+            "brand_name": "Amagi",
+            "rates": {
+              "Mid-Morning": 0,
+              "Morning": 0,
+              "Evening": 0,
+              "Night": 0,
+              "Afternoon": 0
+            },
+            "client_name": "Amagi Media Labs Pvt Ltd",
+            "campaign_id": "GBU3VO62H4UB"
+          }
+        },
+        "duration": 30,
+        "signature": "ABHZC_09_030",
+        "daypart": "Morning",
+        "rotates": [
+          {
+            "playoutTime": "24:00:00",
+            "cities": {
+              "MA": {
+                "code": "MA",
+                "validationError": false,
+                "captions": [
+                  {
+                    "rates": {
+                      "Evening": 0,
+                      "Night": 0,
+                      "Afternoon": 0,
+                      "Mid-Morning": 0,
+                      "Morning": 0
+                    },
+                    "client_name": "Amagi Media Labs Pvt Ltd",
+                    "brand_name": "Amagi",
+                    "campaign_id": "GBU3VO62H4UB",
+                    "ad_name": "NAF130",
+                    "name": "New Amagi Filler 30s_Hindi",
+                    "duration": 30,
+                    "cities": [
+                      "MA"
+                    ],
+                    "schedule_type": "OPEN_RO_ANY_DAY_PART",
+                    "city": "MA",
+                    "id": "43NQ661IZSE5"
+                  }
+                ],
+                "name": "Master"
+              },
+              "GJ": {
+                "validationError": false,
+                "code": "GJ",
+                "captions": [
+                  {
+                    "name": "Santoor_Street Art Film",
+                    "duration": 30,
+                    "ad_name": "SAF730",
+                    "schedule_type": "STRICT",
+                    "cssClass": "btn-warning",
+                    "cities": [
+                      "GJ"
+                    ],
+                    "id": "3QXRU31Y1JE1",
+                    "type": "localAd",
+                    "city": "GJ",
+                    "client_name": "Wipro Enterprises Pvt. Ltd.",
+                    "rates": {
+                      "Morning": 750,
+                      "Mid-Morning": 750,
+                      "Afternoon": 750,
+                      "Night": 750,
+                      "Evening": 750
+                    },
+                    "brand_name": "Santoor Soap",
+                    "isDraggable": true,
+                    "campaign_id": "5CR0KCG6YVXU",
+                    "dayparts": {
+                      "Night": {
+                        "makegoods_scheduled": 0,
+                        "makegoods": -1,
+                        "played_rotates": 0,
+                        "asrun_pending": 0,
+                        "future_overscheduled": 1,
+                        "rotates": 3,
+                        "caption_id": "3QXRU31Y1JE1",
+                        "total_rotates": 21,
+                        "channel_code": "ZC",
+                        "end_date": "2016-05-15",
+                        "cssClass": "btn-success",
+                        "schedule_type": "STRICT",
+                        "start_date": "2016-05-01",
+                        "daypart": "Night",
+                        "rotates_scheduled": 3,
+                        "future_scheduled": 4,
+                        "planned_sofar": 0
+                      },
+                      "Evening": {
+                        "rotates_scheduled": 3,
+                        "future_scheduled": 3,
+                        "planned_sofar": 0,
+                        "schedule_type": "STRICT",
+                        "cssClass": "btn-success",
+                        "daypart": "Evening",
+                        "start_date": "2016-05-01",
+                        "caption_id": "3QXRU31Y1JE1",
+                        "total_rotates": 20,
+                        "end_date": "2016-05-15",
+                        "channel_code": "ZC",
+                        "makegoods_scheduled": 0,
+                        "makegoods": 0,
+                        "played_rotates": 0,
+                        "rotates": 3,
+                        "future_overscheduled": 0,
+                        "asrun_pending": 0
+                      },
+                      "Afternoon": {
+                        "makegoods": 0,
+                        "played_rotates": 1,
+                        "makegoods_scheduled": 0,
+                        "asrun_pending": 0,
+                        "future_overscheduled": 0,
+                        "rotates": 3,
+                        "total_rotates": 20,
+                        "caption_id": "3QXRU31Y1JE1",
+                        "end_date": "2016-05-15",
+                        "channel_code": "ZC",
+                        "cssClass": "btn-success",
+                        "schedule_type": "STRICT",
+                        "start_date": "2016-05-01",
+                        "daypart": "Afternoon",
+                        "future_scheduled": 3,
+                        "planned_sofar": 1,
+                        "rotates_scheduled": 3
+                      },
+                      "Mid-Morning": {
+                        "channel_code": "ZC",
+                        "end_date": "2016-05-15",
+                        "total_rotates": 19,
+                        "caption_id": "3QXRU31Y1JE1",
+                        "rotates": 3,
+                        "future_overscheduled": 0,
+                        "asrun_pending": 0,
+                        "makegoods_scheduled": 0,
+                        "makegoods": 0,
+                        "played_rotates": 0,
+                        "rotates_scheduled": 2,
+                        "future_scheduled": 2,
+                        "planned_sofar": 0,
+                        "daypart": "Mid-Morning",
+                        "start_date": "2016-05-01",
+                        "schedule_type": "STRICT",
+                        "cssClass": "btn-warning"
+                      },
+                      "Morning": {
+                        "daypart": "Morning",
+                        "start_date": "2016-05-01",
+                        "cssClass": "btn-success",
+                        "schedule_type": "STRICT",
+                        "future_scheduled": 3,
+                        "planned_sofar": 1,
+                        "rotates_scheduled": 3,
+                        "rotates": 3,
+                        "future_overscheduled": 0,
+                        "asrun_pending": 0,
+                        "makegoods": 0,
+                        "played_rotates": 1,
+                        "makegoods_scheduled": 0,
+                        "end_date": "2016-05-15",
+                        "channel_code": "ZC",
+                        "caption_id": "3QXRU31Y1JE1",
+                        "total_rotates": 20
+                      }
+                    }
+                  }
+                ],
+                "name": "Gujarat"
+              }
+            },
+            "validationError": false
+          }
+        ]
+      }
+    },
+    "start_time": "06:00:00",
+    "end_time": "10:29:59",
+    "code": "Morning",
+    "name": "Morning"
+  }
+}
