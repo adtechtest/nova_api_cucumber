@@ -572,6 +572,11 @@ When(/^I use "([^"]*)" database and query "([^"]*)" table and "([^"]*)" a "([^"]
   else
     time=Time.now.strftime("%Y-%m-%d")
   end
+
+  if operation == "update future" && table_name == "SIGNATURE_CAPTIONS"
+    time=Time.now.strftime("%Y-%m-%d")
+  end
+
   if table_name == "SIGNATURE_CAPTIONS"
     api_url="http://localhost:3000/api/v1/channels/#{channel}/signature_captions.json"
   elsif table_name == "AVAILABLE_MASTERS"
@@ -614,13 +619,21 @@ When(/^I use "([^"]*)" database and query "([^"]*)" table and "([^"]*)" a "([^"]
     end
   elsif operation.include? "update"
     if property == "signature"
-      query_spot="update AMAGI_REPORTS_DB.RO_SPOT_DETAILS set SIGNATURE='TEST_SIGNATURE' where SCH_DATE='#{time}'  and SIGNATURE='#{@sign}';"
-      puts "Executing query #{query_spot}"
-      query_response=ActiveRecord::Base.connection.execute(query_spot)
-      puts "Executing next query"
-      query_sign_cap="update AMAGI_REPORTS_DB.RO_SIGNATURE_CAPTIONS set SIGNATURE='TEST_SIGNATURE' where  SIGNATURE='#{@sign}';"
-      puts "Executing query #{query_sign_cap}"
-      ActiveRecord::Base.connection.execute(query_sign_cap)  
+      if table_name == "SIGNATURE_CAPTIONS" && operation == "update future"
+        future_date=(Time.now+3.day).strftime("%Y-%m-%d")
+        query="update AMAGI_REPORTS_DB.RO_SPOT_DETAILS set SCH_DATE='#{future_date}' where SCH_DATE='#{time}' and SIGNATURE='#{@sign}';"
+        puts "Query to update"
+        puts query
+        ActiveRecord::Base.connection.execute(query)
+      else
+        query_spot="update AMAGI_REPORTS_DB.RO_SPOT_DETAILS set SIGNATURE='TEST_SIGNATURE' where SCH_DATE='#{time}'  and SIGNATURE='#{@sign}';"
+        puts "Executing query #{query_spot}"
+        query_response=ActiveRecord::Base.connection.execute(query_spot)
+        puts "Executing next query"
+        query_sign_cap="update AMAGI_REPORTS_DB.RO_SIGNATURE_CAPTIONS set SIGNATURE='TEST_SIGNATURE' where  SIGNATURE='#{@sign}';"
+        puts "Executing query #{query_sign_cap}"
+        ActiveRecord::Base.connection.execute(query_sign_cap)  
+      end
     elsif property == "spot count"
       daypart=response[0]["day_part"]
       if daypart == "Rest of Day"
@@ -779,7 +792,6 @@ Then(/^the response for GET "([^"]*)" URL for "([^"]*)" date for "([^"]*)" shoul
     end
   elsif api == "AVAILABLE_MASTERS"
     api_url="http://localhost:3000/api/v1/channels/#{channel}/available_masters.json"
-    api_url="http://localhost:3000/api/v1/channels/#{channel}/available_masters.json"
     url=api_url+time_url
     #url="http://localhost:3000/api/v1/channels/#{channel}/available_masters.json?date=2016-01-07"
     puts "Checking JSON response from #{url}"
@@ -808,11 +820,11 @@ Then(/^the response for GET "([^"]*)" URL for "([^"]*)" date for "([^"]*)" shoul
         spot_count=ActiveRecord::Base.connection.exec_query(spot_count_query)
         spot_count=spot_count[0]["spot_count"]
         puts "Spot count for #{sign} and #{daypart} is #{spot_count} from table"
-        if daypart == "Day"
-          use_daypart="Rest of Day"
-        else
+        #if daypart == "Day"
+          #use_daypart="Rest of Day"
+        #else
           use_daypart=daypart
-        end
+        #end
 
         query_ept="select date_format(ept.start_time, '%H:%i:%S') playout_time from   AMAGI_REPORTS_DB.EXPECTED_PLAYED_TIMES ept inner join AMAGI_REPORTS_DB.WINDOWS w  on ept.start_time >= w.win_begin  and ept.start_time <= w.win_end  and ept.channel_code = w.channel_code  and w.win_dow = dayofweek(ept.sch_date)  and w.valid_till is null where   ept.sch_date = '#{time}'  and ept.channel_code= '#{channel}' and ept.signature='#{sign}' and w.win_label='#{use_daypart}';"
         full_spot_count=0
@@ -826,13 +838,13 @@ Then(/^the response for GET "([^"]*)" URL for "([^"]*)" date for "([^"]*)" shoul
           response["masters"].each do |line|
             puts line
             puts "JSON response #{line["signature"]} and #{line["day_part"]}"
-            puts "@@@@@@@@@@@@@@@@@@@THIS IS A WORKAROUND!!@@@@@@@@@@@@@@@@@@@@"
+            #puts "@@@@@@@@@@@@@@@@@@@THIS IS A WORKAROUND!!@@@@@@@@@@@@@@@@@@@@"
 
-            if line["day_part"] == "Rest of Day"
-              line_daypart="Day"
-            else
+            #if line["day_part"] == "Rest of Day"
+              #line_daypart="Day"
+            #else
               line_daypart=line["day_part"]
-            end
+            #end
 
             puts "From table #{sign} and #{daypart}"
             if line["signature"] == sign && line_daypart == daypart
@@ -1296,6 +1308,7 @@ Then(/^output of "([^"]*)" url for "([^"]*)" date for "([^"]*)" should have "([^
       ans=b['filler_captions'].detect { |e| e['ad_name'] == "#{value}" }
     end
   elsif api == "SIGNATURE_CAPTIONS" || api == "AVAILABLE_MASTERS"
+    puts b
     if value == "empty"
       puts "Checking if response is empty for #{api} API"
       ans=b['masters'].any?
